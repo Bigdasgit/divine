@@ -39,21 +39,22 @@ OS: Only Mac OS and Linux are available for this code.
 
 ##### (Please refer to the author's original README.md for more details of WRMF, STNE, and SIDE.)
 
+### Arguments
+
+```
+--vne_algo                Method for inferring degree of negativity
+--selection_strategy      Strategey for selcting VNEs
+--theta                   Hyperparamter for determining the number of VNEs to be added
+--dataset                 Input (unsigned) network
+--emb_algo                (Signed) network embedding method for learning node embeddings
+--num_embed               Dimensionality of embeddings
+--lp_task                 Link prediction task type
+```
+
 ### Basic Usage
 
 ```bash
 python divine.py --dataset GNU --emb_algo stne --lp_task LP-uniform --num_embed 128 --vne_algo wrmf --theta 0.5 --selection_strategy local
-```
-#### Arguments
-
-```
---vne_algo: Method for inferring degree of negativity
---selection_strategy: Strategey for selcting VNEs
---theta: hyperparamter for determining the number of VNEs to be added
---dataset: input (unsigned) network
---emb_algo: (signed) network embedding method for learning node embeddings
---num_embed: dimensionality of embeddings
---lp_task: link prediction task type
 ```
 
 ### Cite
